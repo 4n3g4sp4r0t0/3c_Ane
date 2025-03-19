@@ -9,3 +9,10 @@ h2 {color: blue;
 border-width: 5px;
 border-style: solid;
 border-color: green;}
+
+figcaption {color: blue;
+border-width: 5px;
+border-style: solid;
+border-color: green;}
+
+a {color:purple}
