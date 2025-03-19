@@ -33,9 +33,30 @@
                                   a última sendo o Grande Prêmio de San Marino, onde se acidentou e morreu, 
                                   no Circuito de Ímola. Ao todo, Senna participou de 161 grandes 
                                   prêmios na Fórmula 1, alcançando 41 vitórias, 80 pódios, 65 pole positions 
-                                  e 19 voltas mais rápidas.</h2>
+                                  e 19 voltas mais rápidas.  
+                                 <a href="https://pt.wikipedia.org/wiki/Ayrton_Senna">Fonte: Wikipedia</a> </h2>
 
-    <img id="download.jpeg" src="download.jpeg" >
+    <figure>
+    <img id="download.jpeg" src="download.jpeg" alt="A imagem apresenta Ayrton Senna Segurando a Bandeira Brasileira">
+    <figcaption>A imagem apresenta Ayrton Senna Levantando a Bandeira Brasileira</figcaption>
+</figure>
+
     <a href="https://www.youtube.com/watch?v=c-Ea6-adHAw">GP do Brasil de 1991</a>
+
+    <button onclick="changeFontSize('aumentar')">Aumentar</button>
+    <button onclick="changeFontSize('reduzir')">Reduzir</button><script>
+    function changeFontSize(action){
+    const elements = ['h1', 'p'];
+    elements.map(element=>{
+    
+    const selector = document.querySelector(element);
+    let value = getComputedStyle(selector).getPropertyValue('font-size');
+    value = value.replace('px', '');
+    value = action === 'aumentar' ? parseInt(value) + 1 : parseInt(value) - 1;
+    selector.style.fontSize = `${value}px`;
+    })
+    }
+    </script>
+    
 </body>
 </html>
